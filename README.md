@@ -41,6 +41,7 @@ cx('class1', 'class2') // "class1 class2"
 
 ```javascript
 const isActive = true
+
 cx('class1', isActive && 'active') // "class1 active"
 ```
 
@@ -58,5 +59,6 @@ const buttonStyles = {
   'btn-primary': true,
   'btn-disabled': false
 }
+
 cx(buttonStyles) // "btn btn-primary"
 ```
