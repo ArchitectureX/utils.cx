@@ -12,7 +12,7 @@
     "compile": "tsc",
     "lint": "eslint --ext .tsx,.ts ./src/**",
     "lint:fix": "eslint --ext .tsx,.ts ./src/**",
-    "webpack:production": "webpack --config=./webpack.config.ts --env mode=production --env packageName=utils.cx",
+    "webpack:production": "webpack --config=./webpack.config.ts --env mode=production",
     "prepublishOnly": "npm run lint && npm run build",
     "versioning": "./publish.sh"
   },
@@ -26,7 +26,7 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "@architecturex/devtools": "1.0.6",
+    "@architecturex/devtools": "1.0.8",
     "ts-loader": "^9.4.4",
     "webpack": "^5.88.2",
     "webpack-bundle-analyzer": "^4.9.1",

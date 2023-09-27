@@ -9,6 +9,11 @@ import {
 import { Configuration } from 'webpack'
 import { merge } from 'webpack-merge'
 
+import { name } from './package.json'
+
+// Package Name
+const [, packageName] = name.split('/')
+
 // Mode Config
 const getModeConfig = {
   development: getWebpackDevelopmentConfig,
@@ -24,19 +29,18 @@ const modeConfig: (args: ConfigArgs) => Configuration = ({ mode }) => {
 
 // Merging all configurations
 const webpackConfig: (args: ConfigArgs) => Promise<Configuration> = async (
-  { mode, packageName } = {
-    mode: 'production',
-    packageName: 'design-system'
+  { mode } = {
+    mode: 'production'
   }
 ) => {
   const commonConfiguration = getWebpackCommonConfig({
     packageName,
     mode,
-    isPackage: false
+    isMonoRepo: false
   })
 
   // Mode Configuration
-  const modeConfiguration = mode ? modeConfig({ mode, packageName }) : {}
+  const modeConfiguration = mode ? modeConfig({ mode }) : {}
 
   // Merging all configurations
   const webpackConfiguration = merge(commonConfiguration, modeConfiguration)
