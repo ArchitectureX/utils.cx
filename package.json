@@ -6,6 +6,12 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "typescript",
+    "utils",
+    "cx",
+    "classnames"
+  ],
   "scripts": {
     "build": "cross-env NODE_ENV=production npm-run-all clean compile webpack:production",
     "clean": "rm -rf ./dist",
@@ -30,7 +36,6 @@
     "ts-loader": "^9.4.4",
     "webpack": "^5.88.2",
     "webpack-bundle-analyzer": "^4.9.1",
-    "webpack-node-externals": "^3.0.0",
-    "webpackbar": "^5.0.2"
+    "webpack-node-externals": "^3.0.0"
   }
 }
