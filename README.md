@@ -27,10 +27,10 @@ const className = cx('class1', 'class2', condition && 'class3')
 The `cx` function can accept multiple arguments of various types:
 
 ```markdown
-- **String**: The string is directly added to the result.
-- **Number**: Numbers are converted to strings and added to the result.
-- **Array**: Nested arrays are flattened. Each element in the array is processed based on its type (can be any of the supported types).
-- **Object**: Object properties that have truthy values are added to the result. For custom objects with a custom `toString` method that doesn't rely on native code, the `toString` method's output is added.
+- ** String **: The string is directly added to the result.
+- ** Number **: Numbers are converted to strings and added to the result.
+- ** Array **: Nested arrays are flattened. Each element in the array is processed based on its type (can be any of the supported types).
+- ** Object **: Object properties that have truthy values are added to the result. For custom objects with a custom `toString` method that doesn't rely on native code, the `toString` method's output is added.
 ```
 
 ### Examples
