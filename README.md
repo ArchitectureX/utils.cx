@@ -6,9 +6,7 @@ The cx function is a utility to conditionally concatenate class names into a sin
 
 ### Installation
 
-```javascript
-npm install @architecturex/utils.cx
-```
+`npm install @architecturex/utils.cx`
 
 ### Usage
 
