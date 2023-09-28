@@ -16,6 +16,7 @@ function cx(...classes: any): string {
 
     if (Array.isArray(arg)) {
       classArr.push(cx(...arg))
+      continue
     }
 
     if (type === 'object') {
