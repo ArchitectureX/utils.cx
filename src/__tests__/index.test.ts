@@ -1,4 +1,6 @@
-import cx from './index'
+import { describe, expect, it } from '@jest/globals'
+
+import cx from '../index'
 
 describe('cx', () => {
   it('should concatenate string arguments', () => {
