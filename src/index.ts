@@ -50,7 +50,7 @@ const cx = {
       }
     }
 
-    return classes
+    return [...new Set(classes)]
   }
 }
 
